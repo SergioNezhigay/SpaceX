@@ -1,20 +1,10 @@
 @import '../sass/utils/variables';
-@import '../sass/utils/normalize';
+// @import '../sass/utils/normalize';
 @import '../sass/utils/reset';
 @import '../sass/utils/mixins';
 @import '../sass/utils/placeholders';
 @import '../sass/utils/common';
-@import '../sass/utils/fonts';
-@import '../sass/utils/typography';
+@import '../sass/base/main';
 
-@import '../sass/components/branches';
-@import '../sass/components/clients';
-@import '../sass/components/features';
-@import '../sass/components/footer';
-@import '../sass/components/forms';
 @import '../sass/components/header';
-@import '../sass/components/hero';
-@import '../sass/components/modal';
-@import '../sass/components/mobile-menu';
-@import '../sass/components/portfolio';
-@import '../sass/components/team';
+@import '../sass/components/sections';
