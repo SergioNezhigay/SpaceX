@@ -1,0 +1,19 @@
+body {
+  font-family: $text-font-stack;
+  color: getColor('primary');
+  background-color: getColor('background');
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon {
+  width: 126px;
+  height: 33px;
+}
