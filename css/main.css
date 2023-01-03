@@ -199,11 +199,15 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nav__logo {
+  margin-top: -12px;
   width: 210px;
   height: 26px;
   color: #fff;
@@ -211,16 +215,28 @@ h4 {
 }
 .nav__list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 35px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 35px;
+  }
 }
 .nav__item:hover .nav__link::after {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   -webkit-transform: scaleX(100%);
           transform: scaleX(100%);
+}
+.nav__item:last-child {
+  position: absolute;
+  right: 112px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .nav__link {
   color: #fff;
@@ -247,48 +263,126 @@ h4 {
   transition: transform 400ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.nav-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.hamburger {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 60px;
-}
-
-.bar {
-  width: 16px;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-}
-
-.hamburger {
-  cursor: pointer;
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: none;
+  z-index: 99;
 }
 
-.bar1 {
-  top: 3px;
+.js-menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: #000;
+  -webkit-transform: scaleX(0%);
+          transform: scaleX(0%);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  padding: 100px 60px;
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 400ms cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 0;
+}
+.js-menu__list {
+  list-style-type: none;
+}
+@media screen and (min-width: 1200px) {
+  .js-menu__list--copy {
+    display: none;
+  }
+}
+.js-menu__link {
+  display: block;
+  font-family: "D-DIN", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+  line-height: 2.5;
+  text-align: right;
+  border-bottom: 1pt solid #252525;
+  -webkit-transition: color 400ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 400ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.js-menu__link:hover {
+  color: #8b939b;
 }
 
-.bar2 {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.open.js-menu {
+  -webkit-transform: scaleX(100%);
+          transform: scaleX(100%);
 }
 
-.bar3 {
-  bottom: 3px;
+#nav-icon4 {
+  width: 21px;
+  height: 16px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 6px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -2px;
+  left: 3px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 13px;
+  left: 3px;
 }
 
 .section {
