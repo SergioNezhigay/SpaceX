@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>My Space</title>
   </head>
@@ -46,78 +47,116 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <button
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        area-label="Menu"
-        role="button"
-        area-haspopup="dialog"
-        id="nav-icon4"
-        class="js-open-menu hamburger"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="js-menu">
-        <ul class="js-menu__list js-menu__list--copy">
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">FALCON 9</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">FALCON HEAVY</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">DRAGON</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">STARSHIP</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">HUMAN SPACEFLIGHT</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">RIDESHARE</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">STARSHIELD</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="" class="js-menu__link">STARLINK</a>
-          </li>
-        </ul>
-        <ul class="js-menu__list">
-          <li class="js-menu__item">
-            <a href="#" class="js-menu__link">Mission</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="#" class="js-menu__link">Launches</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="#" class="js-menu__link">Carrears</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="#" class="js-menu__link">Updates</a>
-          </li>
-          <li class="js-menu__item">
-            <a href="#" class="js-menu__link">Shop</a>
-          </li>
-        </ul>
+        <div class="js-menu">
+          <ul class="js-menu__list js-menu__list--copy">
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">FALCON 9</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">FALCON HEAVY</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">DRAGON</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">STARSHIP</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">HUMAN SPACEFLIGHT</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">RIDESHARE</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">STARSHIELD</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="" class="js-menu__link">STARLINK</a>
+            </li>
+          </ul>
+          <ul class="js-menu__list">
+            <li class="js-menu__item">
+              <a href="#" class="js-menu__link">Mission</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="#" class="js-menu__link">Launches</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="#" class="js-menu__link">Carrears</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="#" class="js-menu__link">Updates</a>
+            </li>
+            <li class="js-menu__item">
+              <a href="#" class="js-menu__link">Shop</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          area-label="Menu"
+          role="button"
+          area-haspopup="dialog"
+          id="nav-icon4"
+          class="js-open-menu hamburger"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
     <main>
-      <!-- Секція Hero -->
       <section class="section">
-        <div class="background">
+        <div class="section__background section__background--first">
+          <div class="container section__container">
+            <div class="section__wrapper">
+              <h4 class="section__subtitle">UPCOMING LAUNCH</h4>
+              <h2 class="section__title" data-aos="slide-up">TRANSPORTER-6 MISSION</h2>
+              <a href="http://" class="button" data-aos="slide-up" data-aos-delay="150">
+                <div class="hover"></div>
+                <span class="button__text">WATCH</span>
+              </a>
+            </div>
+            <div
+              class="ca3-scroll-down-link ca3-scroll-down-arrow"
+              data-ca3_iconfont="ETmodules"
+              data-ca3_icon=""
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__background section__background--second">
           <div class="container section__container">
             <div class="section__wrapper">
               <h4 class="section__subtitle">RECENT LAUNCH</h4>
-              <h2 class="section__title">ISI EROS C-3 MISSION</h2>
-              <a href="http://" class="button">
+              <h2 class="section__title" data-aos="slide-up">ISI EROS C-3 MISSION</h2>
+              <a href="http://" class="button" data-aos="slide-up" data-aos-delay="150">
                 <div class="hover"></div>
-                <span class="button__text">WATCH</span>
+                <span class="button__text">REWATCH</span>
+              </a>
+            </div>
+            <div
+              class="ca3-scroll-down-link ca3-scroll-down-arrow"
+              data-ca3_iconfont="ETmodules"
+              data-ca3_icon=""
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__background section__background--third">
+          <div class="container section__container">
+            <div class="section__wrapper">
+              <h4 class="section__subtitle">RECENT LAUNCH</h4>
+              <h2 class="section__title" data-aos="slide-up">STARLINK MISSION</h2>
+              <a href="http://" class="button" data-aos="slide-up" data-aos-delay="150">
+                <div class="hover"></div>
+                <span class="button__text">REWATCH</span>
               </a>
             </div>
           </div>
@@ -126,7 +165,6 @@
     </main>
     <footer class="footer"></footer>
 
-    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
@@ -134,5 +172,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+      });
+    </script>
   </body>
 </html>
